@@ -1,0 +1,267 @@
+/* ============================================================
+   FTA — Fundación Transparencia Activa
+   Colors & Type foundations
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/Sora-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  /* ============================================================
+     BRAND PALETTE (from official brand guidelines)
+     ============================================================ */
+  --azul-profundo: #0B1D3A;   /* Deep navy — primary brand / text */
+  --azul-electrico: #2962FF;  /* Electric blue — accent / action  */
+  --azul-claro:    #BFD1FF;   /* Light blue — supporting / fills  */
+  --gris:          #6B7280;   /* Neutral gray — secondary text    */
+
+  /* ---------- Deep navy scale ---------- */
+  --navy-900: #060F22;
+  --navy-800: #0B1D3A;  /* = azul-profundo */
+  --navy-700: #122B52;
+  --navy-600: #1B3A6B;
+  --navy-500: #294E86;
+
+  /* ---------- Electric blue scale ---------- */
+  --blue-700: #1442C9;
+  --blue-600: #1E50E6;
+  --blue-500: #2962FF;  /* = azul-electrico */
+  --blue-400: #5C86FF;
+  --blue-300: #8FAAFF;
+  --blue-200: #BFD1FF;  /* = azul-claro */
+  --blue-100: #E3EAFF;
+  --blue-050: #F2F5FF;
+
+  /* ---------- Neutral / gray scale ---------- */
+  --gray-900: #111827;
+  --gray-800: #1F2937;
+  --gray-700: #374151;
+  --gray-600: #4B5563;
+  --gray-500: #6B7280;  /* = gris */
+  --gray-400: #9CA3AF;
+  --gray-300: #D1D5DB;
+  --gray-200: #E5E7EB;
+  --gray-150: #ECEEF2;
+  --gray-100: #F3F4F6;
+  --gray-050: #F8F9FB;
+  --white:    #FFFFFF;
+
+  /* ---------- Semantic status (harmonized to brand) ---------- */
+  --success: #1F8A5B;
+  --success-bg: #E7F4EE;
+  --warning: #C77A12;
+  --warning-bg: #FBF1E2;
+  --danger:  #C4382E;
+  --danger-bg: #FBEAE8;
+  --info:    var(--blue-500);
+  --info-bg: var(--blue-100);
+
+  /* ============================================================
+     SEMANTIC TOKENS
+     ============================================================ */
+  --bg:            var(--white);
+  --bg-subtle:     var(--gray-050);
+  --bg-muted:      var(--gray-100);
+  --bg-inverse:    var(--navy-800);
+  --bg-brand-soft: var(--blue-050);
+
+  --fg:            var(--navy-800);   /* primary text */
+  --fg-secondary:  var(--gray-600);
+  --fg-muted:      var(--gray-500);
+  --fg-on-dark:    var(--white);
+  --fg-on-dark-2:  #AEBBD2;
+  --fg-brand:      var(--blue-500);
+
+  --border:        var(--gray-200);
+  --border-strong: var(--gray-300);
+  --border-brand:  var(--blue-200);
+
+  --action:        var(--blue-500);
+  --action-hover:  var(--blue-600);
+  --action-active: var(--blue-700);
+  --link:          var(--blue-600);
+
+  /* ============================================================
+     TYPE — Sora throughout
+     ============================================================ */
+  --font-sans: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale (1.250 major-third-ish, tuned) */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-lg:   1.125rem;  /* 18 */
+  --text-xl:   1.375rem;  /* 22 */
+  --text-2xl:  1.75rem;   /* 28 */
+  --text-3xl:  2.25rem;   /* 36 */
+  --text-4xl:  3rem;      /* 48 */
+  --text-5xl:  3.75rem;   /* 60 */
+  --text-6xl:  4.75rem;   /* 76 */
+
+  --leading-tight: 1.1;
+  --leading-snug:  1.25;
+  --leading-normal:1.55;
+  --leading-relaxed:1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:  0.04em;
+  --tracking-caps:  0.12em;  /* eyebrow / overline */
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ============================================================
+     SPACING (4px base)
+     ============================================================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows (cool navy tint, never pure black) ---------- */
+  --shadow-xs: 0 1px 2px rgba(11, 29, 58, 0.06);
+  --shadow-sm: 0 1px 3px rgba(11, 29, 58, 0.08), 0 1px 2px rgba(11, 29, 58, 0.04);
+  --shadow-md: 0 4px 12px rgba(11, 29, 58, 0.08), 0 2px 4px rgba(11, 29, 58, 0.04);
+  --shadow-lg: 0 12px 28px rgba(11, 29, 58, 0.12), 0 4px 8px rgba(11, 29, 58, 0.05);
+  --shadow-xl: 0 24px 56px rgba(11, 29, 58, 0.16);
+  --shadow-brand: 0 8px 24px rgba(41, 98, 255, 0.28);
+
+  --ring-focus: 0 0 0 3px rgba(41, 98, 255, 0.35);
+
+  --container: 1200px;
+}
+
+/* ============================================================
+   ELEMENT DEFAULTS / SEMANTIC TYPE CLASSES
+   ============================================================ */
+.fta-h1, h1.fta {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+.fta-h2, h2.fta {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg);
+}
+.fta-h3, h3.fta {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg);
+}
+.fta-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--fg);
+}
+.fta-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-brand);
+}
+.fta-lead {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-secondary);
+}
+.fta-body {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg);
+}
+.fta-small {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--fg-secondary);
+}
+.fta-caption {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-muted);
+}
