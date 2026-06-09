@@ -10,14 +10,17 @@ function Logo({ variant = "color", height = 34 }) {
   const src = variant === "white" ? "assets/logo-horizontal-white-web.png" : "assets/logo-horizontal-color-web.png";
   return <img src={src} alt="Fundación Transparencia Activa" style={{ height, width: "auto", display: "block" }} />;
 }
-function Button({ children, variant = "primary", size = "md", icon, iconRight, onClick, type = "button", href, full }) {
+function Button({ children, variant = "primary", size = "md", icon, iconRight, onClick, type = "button", href, full, newTab }) {
   const cls = `btn btn-${variant} btn-${size}` + (full ? " btn-full" : "");
   const inner = (<>
     {icon && <Icon name={icon} size={size === "lg" ? 20 : 18} />}
     {children && <span>{children}</span>}
     {iconRight && <Icon name={iconRight} size={size === "lg" ? 20 : 18} />}
   </>);
-  if (href) return <a className={cls} href={href} onClick={onClick}>{inner}</a>;
+  if (href) {
+    const ext = newTab ? { target: "_blank", rel: "noopener noreferrer" } : {};
+    return <a className={cls} href={href} onClick={onClick} {...ext}>{inner}</a>;
+  }
   return <button type={type} className={cls} onClick={onClick}>{inner}</button>;
 }
 function Badge({ children, tone = "neutral", dot }) {

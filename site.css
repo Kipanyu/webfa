@@ -82,7 +82,7 @@ a { cursor: pointer; text-decoration: none; color: inherit; }
 .hero-dark-stats { display: flex; gap: 56px; margin-top: 56px; flex-wrap: wrap; }
 
 /* ---------- HERO: centered ---------- */
-.hero-centered { background: linear-gradient(180deg, var(--blue-050), #fff); padding: 92px 0 0; text-align: center; }
+.hero-centered { background: linear-gradient(180deg, var(--blue-050), #fff); padding: 92px 0 88px; text-align: center; }
 .hero-centered-inner { max-width: 880px; margin: 0 auto; padding: 0 32px; }
 .hero-title-center { max-width: 100%; }
 .hero-lead-center { margin-left: auto; margin-right: auto; }
@@ -270,3 +270,68 @@ a { cursor: pointer; text-decoration: none; color: inherit; }
 /* buttons on dark surfaces */
 [data-theme="dark"] .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
 [data-theme="dark"] .btn-outline:hover { border-color: var(--accent-dyn); color: var(--accent-dyn); }
+
+/* ============================================================
+   CONTENIDOS CLIENTE — bloques nuevos
+   ============================================================ */
+/* hero — párrafo secundario */
+.hero-body { font-size: 15.5px; line-height: 1.65; color: var(--fg-muted); margin-top: 14px; max-width: 50ch; }
+.hero-body-dark { color: var(--fg-on-dark-2); }
+.hero-body-center { margin-left: auto; margin-right: auto; }
+[data-theme="dark"] .hero-body { color: var(--txt-3); }
+
+/* FOCO Bootcamp (banda oscura) */
+.bootcamp { background: var(--navy-800); position: relative; overflow: hidden; }
+.bootcamp-iso { position: absolute; right: -90px; top: -70px; width: 340px; opacity: 0.08; }
+.bootcamp-inner { max-width: var(--container); margin: 0 auto; padding: 84px 32px; position: relative; }
+.bootcamp-title { font-size: var(--text-4xl); font-weight: 700; color: #fff; letter-spacing: -0.025em; margin-top: 16px; }
+.bootcamp-lead { font-size: var(--text-xl); color: #fff; opacity: 0.92; margin-top: 18px; line-height: 1.5; max-width: 60ch; }
+.bootcamp-body { font-size: var(--text-base); color: var(--fg-on-dark-2); margin-top: 16px; line-height: 1.65; max-width: 64ch; }
+.bootcamp-actions { margin-top: 30px; }
+
+/* Manifiesto */
+.manifiesto-head { margin-bottom: 40px; }
+.manifiesto-title { max-width: 22ch; }
+.manifiesto-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.manifiesto-lead { font-size: var(--text-xl); line-height: 1.5; color: var(--navy-800); font-weight: 500; letter-spacing: -0.01em; }
+.manifiesto-col .manifiesto-p { font-size: 16px; line-height: 1.7; color: var(--fg-secondary); margin-top: 18px; }
+[data-theme="dark"] .manifiesto-lead { color: #fff; }
+[data-theme="dark"] .manifiesto-col .manifiesto-p { color: var(--txt-2); }
+
+/* Qué hacemos */
+.qh-head { margin-bottom: 40px; }
+.qh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.qh-card { display: flex; flex-direction: column; }
+.qh-card .pillar-desc { margin-top: 10px; }
+.qh-cta { margin-top: 44px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 28px 32px; box-shadow: var(--shadow-sm); }
+.qh-cta-text { font-size: var(--text-xl); font-weight: 600; color: var(--navy-800); letter-spacing: -0.01em; max-width: 30ch; }
+[data-theme="dark"] .qh-cta { background: var(--surface-2); border-color: var(--bord); }
+[data-theme="dark"] .qh-cta-text { color: #fff; }
+
+/* En acción — filtros + feed */
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.filtros .tab { background: var(--gray-100); }
+.filtros .tab-active { background: var(--accent-dyn); color: #fff; box-shadow: var(--shadow-sm); }
+[data-theme="dark"] .filtros .tab { background: rgba(255,255,255,0.07); }
+[data-theme="dark"] .filtros .tab-active { background: var(--accent-dyn); color: #fff; }
+.accion-fecha { font-size: 12.5px; font-weight: 600; color: var(--fg-muted); white-space: nowrap; }
+[data-theme="dark"] .accion-fecha { color: var(--txt-3); }
+.accion-meta { justify-content: flex-start; }
+.accion-soon { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--fg-muted); font-weight: 500; }
+.accion-final { margin-top: 36px; display: flex; justify-content: center; }
+
+/* Footer */
+.footer-claim { color: var(--blue-300); font-style: italic; margin-top: 12px; }
+
+/* Contacto — párrafo secundario */
+.contacto-p { font-size: 15px; line-height: 1.65; color: var(--fg-secondary); margin-top: 16px; max-width: 46ch; }
+[data-theme="dark"] .contacto-p { color: var(--txt-2); }
+
+@media (max-width: 920px) {
+  .manifiesto-cols, .qh-grid { grid-template-columns: 1fr; }
+  .qh-grid { gap: 16px; }
+}
+@media (max-width: 560px) {
+  .qh-cta { padding: 22px; }
+}

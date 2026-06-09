@@ -34,7 +34,7 @@ function App() {
 
   // scroll-spy
   useEffect(() => {
-    const ids = ["inicio", "quienes", "informes", "campania", "contacto"];
+    const ids = ["inicio", "que-hacemos", "en-accion", "contacto"];
     const onScroll = () => {
       const y = window.scrollY + 120;
       let cur = "inicio";
@@ -54,9 +54,10 @@ function App() {
       <Nav active={active} theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero variant={t.heroVariant} />
-        <Quienes />
-        <Informes />
-        <Campania />
+        <Bootcamp />
+        <Manifiesto />
+        <QueHacemos />
+        <EnAccion />
         <Contacto />
       </main>
       <Footer />
